@@ -37,10 +37,13 @@ def dist(s,k):
                     print(substring)
 dist(s,k)
 def pal():
-    slic_e=s[::-1]
-    if(slic_e==s):
-        print("Palindrome : ",slic_e)
-    else:
-        print("Not palindrome : ",slic_e)
+    l=len(s)
+    print("Palindrome substrings are : ")
+    for i in range(0,l+1):
+        for j in range(i+1,l+1):
+            substring=s[i:j]
+            slic_e=substring[::-1]
+            if(slic_e==substring):
+                    print(slic_e,end=",")
 pal()
 
